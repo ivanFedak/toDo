@@ -1,0 +1,104 @@
+@import './services/mixins'
+@import './services/icons' 
+ 
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:regular,700&display=swap)
+
+//-----fonts--------//
+// @import './services/fonts'
+
+// font-family: Roboto, sans-serif (300, 500, 700, 900)
+
+
+
+//ctr + shift + p
+
+//&display=swap
+
+
+
+// $maxWidth: 1440
+
+$maxWidthContainer: 900 + 30
+//+ 30px
+  
+  
+$md1: $maxWidthContainer + 12
+$md2: 991.98 
+$md3: 767.98
+$md4: 479.98
+
+
+
+
+
+//Variables
+
+
+$mainBg: rgb(22, 23, 28)
+$todoBg: rgb(37, 38, 48)
+$todoShadow: rgb(22, 23, 28)
+$mainColor: hsl(234, 39%, 85%) //!!
+$mainHower: #fff
+
+// .theme-light
+//   $mainBg: hsl(0, 0%, 98%)
+//   $todoBg: hsl(0, 0%, 98%)
+//   $todoShadow: hsl(235, 19%, 35%)
+//   $mainColor: hsl(236, 9%, 61%) //!!
+//   $mainHower: hsl(235, 21%, 11%)
+
+//
+
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  font-family: Josefin Sans, sans-serif
+  font-size: 18px
+  color: $mainColor
+
+
+
+html,body
+  height: 100%
+
+
+
+  
+._container
+  max-width: $maxWidthContainer + px
+  padding: 0 15px
+  margin: 0 auto
+
+.wrapper 
+  min-height: 100%
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  background-color: $mainBg
+
+.page 
+  flex: 1 1 auto
+
+._lock
+  overflow: hidden
+
+// ----------Default settings
+@import './services/default'
+@import './services/swipper'
+@import './modules/ui' 
+
+
+//-----------Componets import-----------------\\
+
+  
+@import './components/header'
+@import './components/main'
+@import './components/footer'
+
+
+//-----------Componets import-----------------\\
+

@@ -1,0 +1,72 @@
+.header
+    position: relative
+    @include adaptiv-value('padding-top', 60, 50, 1)
+    @include adaptiv-value('padding-bottom', 90, 60, 1)
+    &__container
+        position: relative
+        z-index: 2
+    &__logo
+        display: flex
+        align-items: center
+        flex-direction: row-reverse
+        justify-content: space-between
+        @include adaptiv-value('font-size', 43, 33, 1)
+        font-weight: 700
+        color: $mainColor
+        transition: all 0.3s ease 0s
+        &::before
+            @include adaptiv-value('font-size', 33, 28, 1)
+        &:not(:last-child)
+            @include adaptiv-value('margin-bottom', 45, 30, 1)
+        @media (any-hover: hover )
+            &:hover
+                color: $mainHower
+              
+    &__body
+        display: flex
+        justify-content: space-between
+        @include adaptiv-value('padding', 20, 10, 1)
+        border-radius: 5px
+        background-color: $todoBg
+        transition: all 0.3s ease 0s
+        @media (any-hover: hover )              
+            box-shadow: 0px 2px 15px 0px $todoShadow
+        @media (any-hover: hover )
+            &:hover
+                box-shadow: none
+    &__input
+        flex: 1 1 auto
+        width: 100%
+        padding: 10px
+        padding-left: 0
+        border: none
+        background-color: $todoBg
+        color: $mainColor
+        @include adaptiv-value('font-size', 19, 17, 1)
+    &__btn
+        display: inline-flex
+        flex-direction: column
+        align-self: flex-start
+        align-items: center
+        justify-content: center
+        text-align: center
+        @include adaptiv-value('min-width', 120, 100, 1)
+        @include adaptiv-value('padding', 10, 7, 1)
+        @include adaptiv-value('font-size', 18, 16, 1)
+        background-color: rgb(118, 22, 166)
+        transition: all 0.3s ease 0s    
+        border-radius: 2px
+        color: #fff
+        text-transform: uppercase
+        @media (any-hover: hover )
+            &:hover
+                background-color: rgb(22, 139, 166)
+        @media (max-width: $md4 + px)//Less 479
+           display: none
+    &__image
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 1
+        width: 100%
+        height: 300px
