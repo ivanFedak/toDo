@@ -2,45 +2,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/js/components/createList.js":
-/*!*****************************************!*\
-  !*** ./src/js/components/createList.js ***!
-  \*****************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-const builder = () => {// const input = document.querySelector('.header__input'),
-  //       btn = document.querySelector('.header__btn'),
-  //       wrapper = document.querySelector('.main__body');
-  // function createList(data) {
-  //     if(!input.value == ''){
-  //         let item = document.createElement('div');
-  //         item.classList.add('main__item');
-  //         item.innerHTML = `
-  //             <div class="main__check">
-  //                 <input type="checkbox">
-  //             </div>
-  //             <div class="main__text">${data}</div>
-  //             <div class="main__close _icon-cross"></div>
-  //         `
-  //         wrapper.appendChild(item)
-  //         input.value = ''
-  //     }
-  // }
-  // btn.addEventListener('click',function(e){
-  //     createList(input.value)
-  // })
-  // input.addEventListener('keydown', function(e){//Click enter
-  //     if(e.code == 'Enter'){
-  //         createList(input.value)
-  //     }
-  // })
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (builder);
-
-/***/ }),
-
 /***/ "./src/js/components/list.js":
 /*!***********************************!*\
   !*** ./src/js/components/list.js ***!
@@ -795,6 +756,25 @@ const burger = () => {// const btn = document.querySelector('.icon-menu'),
 
 /***/ }),
 
+/***/ "./src/js/modules/themeSwitcher.js":
+/*!*****************************************!*\
+  !*** ./src/js/modules/themeSwitcher.js ***!
+  \*****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+const themeSwitcher = () => {
+  const switcher = document.querySelector('.header__logo');
+  const body = document.querySelector('body');
+  switcher.addEventListener('click', function (e) {
+    body.classList.toggle('theme-light');
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (themeSwitcher);
+
+/***/ }),
+
 /***/ "./src/js/services/default.js":
 /*!************************************!*\
   !*** ./src/js/services/default.js ***!
@@ -913,8 +893,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _libs_dynamicAdaptive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./libs/dynamicAdaptive */ "./src/js/libs/dynamicAdaptive.js");
 /* harmony import */ var _services_default__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./services/default */ "./src/js/services/default.js");
 /* harmony import */ var _components_list__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/list */ "./src/js/components/list.js");
-/* harmony import */ var _components_createList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/createList */ "./src/js/components/createList.js");
-/* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/burger */ "./src/js/modules/burger.js");
+/* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/burger */ "./src/js/modules/burger.js");
+/* harmony import */ var _modules_themeSwitcher__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/themeSwitcher */ "./src/js/modules/themeSwitcher.js");
 
 
 
@@ -925,12 +905,12 @@ __webpack_require__.r(__webpack_exports__);
 
 window.onload = function () {
   (0,_components_list__WEBPACK_IMPORTED_MODULE_4__["default"])();
-  (0,_components_createList__WEBPACK_IMPORTED_MODULE_5__["default"])();
   (0,_services_default__WEBPACK_IMPORTED_MODULE_3__["default"])();
-  (0,_modules_burger__WEBPACK_IMPORTED_MODULE_6__["default"])(); // spoller();
+  (0,_modules_burger__WEBPACK_IMPORTED_MODULE_5__["default"])(); // spoller();
   // slider();
 
   (0,_libs_dynamicAdaptive__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  (0,_modules_themeSwitcher__WEBPACK_IMPORTED_MODULE_6__["default"])();
 };
 }();
 /******/ })()
